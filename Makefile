@@ -24,6 +24,7 @@ $(NAME) : $(OBJ)
 clean:
 	rm -f $(OBJ)
 	rm -f $(DEPS)
+	$(MAKE) -C libft clean
 
 norm:
 	norminette ./srcs/ ./inc

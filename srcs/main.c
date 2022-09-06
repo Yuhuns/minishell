@@ -6,7 +6,7 @@
 /*   By: awallet <awallet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/06 12:22:51 by awallet           #+#    #+#             */
-/*   Updated: 2022/09/06 13:57:39 by awallet          ###   ########.fr       */
+/*   Updated: 2022/09/06 14:00:24 by awallet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ int	main(int ac, char **av, char **env)
 	(void)env;
 	(void)av;
 	(void)ac;
+
 	while (true)
 	{
 		ft_putstr_fd("minishell> ", 0);
