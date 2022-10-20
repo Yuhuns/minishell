@@ -1,24 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   minishell.h                                        :+:      :+:    :+:   */
+/*   parser.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: awallet <awallet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/06 12:22:44 by awallet           #+#    #+#             */
-/*   Updated: 2022/10/20 16:05:00 by awallet          ###   ########.fr       */
+/*   Created: 2022/10/20 16:03:58 by awallet           #+#    #+#             */
+/*   Updated: 2022/10/20 16:55:10 by awallet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MINISHELL_H
-# define MINISHELL_H
+#include "../inc/minishell.h"
 
-# include "utils.h"
-# include "../libft/libft.h"
-# include "../libft/get_next_line.h"
+// TODO: Remove the \n (EOF) when i split.
+void	parser(char *line)
+{
+	char	**cmd;
+	int		i;
 
-# include <stdio.h>
-
-void	parser(char *line);
-
-#endif
+	cmd = ft_split(line, ' ');
+	i = -1;
+	while (cmd[++i])
+	{
+		printf("cmd[%u] %s-\n", i, cmd[i]);
+		if (ft_strcmp("cd", cmd[i]) == 0)
+			printf("OUI\n");
+		else if (ft_strcmp("exit", cmd[i]) == 0)
+			exit(e_succ);
+	}
+	free(cmd);
+}

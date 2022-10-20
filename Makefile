@@ -1,6 +1,7 @@
 NAME = minishell
 
 SRC =	./srcs/main.c \
+	./srcs/parser.c \
 
 OBJ = $(SRC:.c=.o)
 
