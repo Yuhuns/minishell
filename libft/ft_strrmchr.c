@@ -1,34 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strrmchr.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: awallet <awallet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/06 12:22:51 by awallet           #+#    #+#             */
-/*   Updated: 2022/10/21 17:58:21 by awallet          ###   ########.fr       */
+/*   Created: 2022/10/21 17:23:23 by awallet           #+#    #+#             */
+/*   Updated: 2022/10/21 17:46:35 by awallet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/minishell.h"
+#include "libft.h"
 
-int	main(int ac, char **av, char **env)
+//Remove the chr of the end from a string.
+char	*ft_strrmchr(char *s, char c)
 {
-	char	*line;
-	t_test	d;
+	size_t	ln;
 
-	(void)env;
-	(void)av;
-	(void)ac;
-	line = NULL;
-	d.init = true;
-	while (d.init)
-	{
-		ft_putstr_fd("minishell> ", 0);
-		line = get_next_line(0);
-		if (line)
-			parser(&d, line);
-	}
-	free(line);
-	return (e_succ);
+	ln = ft_strlen(s) - 1;
+	if (*s && s[ln] == c)
+		s[ln] = 0;
+	return (s);
 }

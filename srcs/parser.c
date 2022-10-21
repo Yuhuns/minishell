@@ -6,27 +6,30 @@
 /*   By: awallet <awallet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 16:03:58 by awallet           #+#    #+#             */
-/*   Updated: 2022/10/20 16:55:10 by awallet          ###   ########.fr       */
+/*   Updated: 2022/10/21 17:56:55 by awallet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/minishell.h"
 
-// TODO: Remove the \n (EOF) when i split.
-void	parser(char *line)
+//cmd demande:
+// echo, cd, pwd, export, unset, env, exit
+void	parser(t_test *d, char *line)
 {
 	char	**cmd;
-	int		i;
 
+	if (ft_strcspn(line, "\n"))
+		line = ft_strrmchr(line, '\n');
 	cmd = ft_split(line, ' ');
-	i = -1;
-	while (cmd[++i])
+	if (cmd[0])
 	{
-		printf("cmd[%u] %s-\n", i, cmd[i]);
-		if (ft_strcmp("cd", cmd[i]) == 0)
-			printf("OUI\n");
-		else if (ft_strcmp("exit", cmd[i]) == 0)
-			exit(e_succ);
+		if (ft_strcmp("cd", cmd[0]) == 0)
+			printf("Looking for cd\n");
+		else if (ft_strcmp("exit", cmd[0]) == 0)
+			d->init = false;
+		else
+			printf("CMD %s\n", cmd[0]);
 	}
 	free(cmd);
 }
+

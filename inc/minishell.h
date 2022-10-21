@@ -6,7 +6,7 @@
 /*   By: awallet <awallet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/06 12:22:44 by awallet           #+#    #+#             */
-/*   Updated: 2022/10/20 16:05:00 by awallet          ###   ########.fr       */
+/*   Updated: 2022/10/21 17:55:22 by awallet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,11 @@
 
 # include <stdio.h>
 
-void	parser(char *line);
+typedef struct e_test
+{
+	int	init;
+}	t_test;
+
+void	parser(t_test *d, char *line);
 
 #endif

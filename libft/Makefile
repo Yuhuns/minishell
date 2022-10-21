@@ -6,7 +6,7 @@
 #    By: awallet <awallet@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/02 18:03:30 by awallet           #+#    #+#              #
-#    Updated: 2022/08/07 19:07:08 by awallet          ###   ########.fr        #
+#    Updated: 2022/10/21 17:29:06 by awallet          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,6 +30,7 @@ SRC =   ft_atoi.c \
 		ft_strlcat.c \
 		ft_strlcpy.c \
 		ft_strlen.c \
+		ft_strrmchr.c \
 		ft_strncmp.c \
 		ft_strnstr.c \
 		ft_strrchr.c \
